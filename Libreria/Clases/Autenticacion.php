@@ -1,24 +1,36 @@
 <?php
 include "Usuarios.php";
-include "Conexion.php";
+session_start();
 
-class Autenticacion extends Usuarios{
+class Autenticacion{
     
     public function __construct($nombre, $usuario)
     {
         // $this->nombre = $nombre;
-        $this->usuario = $usuario;
+    
 
     }
      public function registrar(){
-        $sql = "inset into usuarios(nombre,username) values $this->nombre,$this->usuario) ";
-        echo $sql;
+   echo "ssdsds";
        
         }
-         public function login()
+         public function login($username,$password,$mysqli)
          {
-         
-         
+            $sql = "Select * from Usuarios where usuario = '".$username."' and password ='".$password."' ";
+        
+            $row = $mysqli->query("Select * from Usuarios where usuario = '".$username."' and password ='".$password."' ");
+             var_dump($sql);
+           //  var_dump($row);
+             
+            if($row->num_rows >0 ){
+           
+header("Location:../../Dashboard.php");
+
+            }
+            /*
+            while ($fila = $row->fetch_row()) {
+                printf ("%s (%s)\n", $fila[0], $fila[1]);
+            }*/
          }
      
 
@@ -26,4 +38,3 @@ class Autenticacion extends Usuarios{
 
 
 }
-

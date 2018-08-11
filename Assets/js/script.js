@@ -1,22 +1,6 @@
-$(document).ready(function(){
-
-//Boton del login
-$("#btnlogin").click(function(){
-  
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  $(function() {
+    $('#toggle-two').bootstrapToggle({
+      on: 'Activado',
+      off: 'Desactivado'
     });
+  })
