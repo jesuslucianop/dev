@@ -1,6 +1,10 @@
 
-<?php include ("Header.php");?>
-<div class="container">
+<?php 
+$vista = "Login";
+include ("Header.php");
+
+?>
+
 <div class="row">
 <div class="col col-md-4 col-md-offset-4">
 <h1>Api Bibliotecaria</h1>
