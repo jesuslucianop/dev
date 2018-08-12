@@ -1,5 +1,5 @@
 <?php
-include ("./Libreria/Clases/Conexion.php");
+
 class Usuarios
 {
     public  $nombre ="alo";
