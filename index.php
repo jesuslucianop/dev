@@ -1,6 +1,6 @@
 
 <?php 
-$vista = "Login";
+$vista = 1;
 include ("Header.php");
 
 ?>
