@@ -4,23 +4,18 @@
 include ("Header.php");
 
 ?>
-<div class="row">
-
-<div class="col-md-12">
-
-<form class="md-form" action="#">
+<form class="md-form">
     <div class="file-field">
         <div class="btn btn-primary btn-sm float-left">
-            <span>Choose files</span>
-            <input type="file" multiple>
+            <span>Choose file</span>
+            <input type="file">
         </div>
         <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+           <input class="file-path validate" type="text" placeholder="Upload your file">
         </div>
     </div>
 </form>
-</div>
-</div>
+
 <?php
  include("Footer.php");
 
