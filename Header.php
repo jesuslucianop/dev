@@ -4,19 +4,14 @@ session_start();?>
 <html>
 <head>
 <link rel="stylesheet" href="./Assets/css/bootstrap.min.css"/>
-
 <link rel="stylesheet" href="./Assets/css/style.css"/>
-<link rel="stylesheet" href="./Assets/css/bootstrap-toggle.min.css"/>
-<script type="text/javascript" src="./Assets/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./Assets/js/tether.js"></script>
-<script type="text/javascript" src="./Assets/js/tether.min.js"></script>
+<script type="text/javascript" src="./Assets/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./Assets/js/bootstrap.min.js"></script>
 
 
-<script type="text/javascript" src="./Assets/js/bootstrap.js"></script>
-<script type="text/javascript" src="./Assets/js/bootstrap-toggle.js"></script>
 </head>
-<body><?php
+<body>
+<?php
 if($vista !="Login"){?>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
