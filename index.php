@@ -1,9 +1,21 @@
-
 <?php 
 $vista = 1;
-include ("Header.php");
 
-?>
+
+session_start();?>
+<html>
+<head>
+<link rel="stylesheet" href="./Assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./Assets/css/style.css"/>
+<script type="text/javascript" src="./Assets/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="./Assets/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="container">
 
 <div class="row">
 <div class="col col-md-4 col-md-offset-4">

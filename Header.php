@@ -1,5 +1,7 @@
 <?php 
 
+
+
 session_start();?>
 <html>
 <head>
@@ -11,17 +13,14 @@ session_start();?>
 
 </head>
 <body>
-<?php
-if($vista != 1){
 
-?>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Api Bibliotecaria</a>
     </div>
     <ul class="nav navbar-nav">
-   <?php if($_SESSION['Rol_usuario']== 1){?>
+   <?php if($_SESSION['Rol_usuario'] == 1){?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Usuario <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -58,6 +57,4 @@ if($vista != 1){
 </nav>
   
 
-
-<?php }?>
 <div class="container">
