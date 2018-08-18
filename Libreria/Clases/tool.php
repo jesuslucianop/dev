@@ -187,19 +187,20 @@ class Tool
         if (isset($msg))
             return $msg;
     }
-
+    
     public function uploadFile($files,$destiny){
-        
+   
         $name = $files['file']['name']; //nombre de la imagen
         $name = str_replace(" ", "_", $name);
         $tmp = $files['file']['tmp_name']; // nombre temporal de la imagen
         $num = rand(0,999999);
         $fecha = date("dmY");
         $upfile = $fecha."_".$num."_".$name; //nuevo nombre de la imagen
+        $url = $destiny."/".$upfile;
+       move_uploaded_file($tmp, $destiny . $upfile);
 
-        move_uploaded_file($tmp, $destiny . $upfile);
-
-        return $upfile;
+        print_r($destiny."/".$upfile);
+        //print_r($pdf);
     }
 
 }

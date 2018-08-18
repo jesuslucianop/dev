@@ -9,6 +9,8 @@ session_start();?>
 <link rel="stylesheet" href="./Assets/css/style.css"/>
 <script type="text/javascript" src="./Assets/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./Assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./Assets/js/PDFPageCount.js"></script>
+<script type="text/javascript" src="./Assets/js/script.js"></script>
 
 
 </head>
@@ -24,11 +26,11 @@ session_start();?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Usuario <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Registrar Nuevo Usuario</a></li>
+            <li><a href="#">Cambiar Rol</a></li>
+            <li><a href="#">Eliminar Usuario</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#">Lista De usuarios</a></li>
           </ul>
           <?php }?>
               <li><a href="./Dashboard.php">Libros Disponible</a></li>

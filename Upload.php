@@ -4,9 +4,12 @@
 include ("Header.php");
 
 ?>
+
 <div class="row">
 <div class="col col-md-4 col-md-offset-4">
 <h1>Seccion de registro de Libros</h1>
+<a href="./index/1">s</a>
+<form method="POST" action="./Libreria/Clases/Motor.php" enctype="multipart/form-data">
 <div class="form-group input-group">
 <label class="input-group-addon">Titulo del Libro</label>
 <input type="text" name="titulo" id="titulo" class="form-control"/>
@@ -17,15 +20,21 @@ include ("Header.php");
 </div>
 <div class="form-group input-group">
 <label class="input-group-addon">Autores</label>
-<select name="cars" class="form-control">
-    <option value="volvo">Volvo</option>
-    <option value="saab">Saab</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
+<select name="autores" class="form-control">
+    <option value="1">servantes</option>
+    <option value="2">maquiavelo</option>
+    <option value="3">Fiat</option>
+    <option value="4">Audi</option>
   </select>
 </div>
 <div class="form-group input-group">
+<label class="input-group-addon">Cantidad de Paginas</label>
+<input type="text" name="cantidad" id="titulo" class="form-control"/>
 </div>
+<div class="form-group input-group">
+<button clas="btn btn-primary" type="submit" name="btnuploadlibro">Enviar</button>
+</div>
+</form>
 </div>
 
 

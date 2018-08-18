@@ -14,7 +14,14 @@ session_start();?>
 </head>
 <body>
 
+<?php 
+if(isset($_GET['url'])){
 
+    echo $_GET['url'];
+    echo "pasamos por aqui";
+var_Dump($_SERVER);
+}
+?>
 <div class="container">
 
 <div class="row">

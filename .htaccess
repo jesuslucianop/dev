@@ -1,3 +1,14 @@
-RewriteEngine on
-RewriteCond $1 !^(index\.php|robots\.txt|sitemap\.xml|media|js|css|font|font-awesome|public|assets)
-RewriteRule ^(.*)$ index.php/$1 [L]
+#Options -Indexes
+
+
+#<IfModule mod_rewrite.c>
+# Activar RewriteEngine
+#RewriteEngine on
+#RewriteBase /amigable/
+#RewriteCond %{SCRIPT_FILENAME} !-d
+#RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+#RewriteRule ^(.*)$ $1.php
+#RewriteRule ^(.+) index.php?url=$1 [QSA,L]
+
+#</IfModule>

@@ -19,7 +19,7 @@ class Autenticacion{
 
     public function login($username,$password)
     {
-        $row = $this->db->query("Select * from Usuarios where usuario = '".$username."'                                             and password ='".$password."' ");
+        $row = $this->db->query("Select * from Usuarios where usuario = '".$username."' and password ='".$password."' ");
             
         if($row->num_rows >0 ) 
             header("Location:../../Dashboard.php");
