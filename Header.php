@@ -2,7 +2,12 @@
 
 
 
-session_start();?>
+session_start();
+if(!isset($_SESSION['nombre_usuario'])){
+  header("Location:Index.php");
+}
+
+?>
 <html>
 <head>
 <link rel="stylesheet" href="./Assets/css/bootstrap.min.css"/>
@@ -26,7 +31,7 @@ session_start();?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Usuario <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Registrar Nuevo Usuario</a></li>
+            <li><a href="./Registrar.php">Registrar Nuevo Usuario</a></li>
             <li><a href="#">Cambiar Rol</a></li>
             <li><a href="#">Eliminar Usuario</a></li>
             <li role="separator" class="divider"></li>
@@ -44,11 +49,8 @@ session_start();?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span><?php echo "   ". $_SESSION['nombre_usuario'];?> <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#" class="btn btn-danger">Cerrar session</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><button   type="button" class="btn btn-danger" id="btncerrarsession">Cerrar session</button></li>
+          
           </ul>
 
     </ul>

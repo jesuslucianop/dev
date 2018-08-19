@@ -1,14 +1,20 @@
 <?php 
-$vista = 1;
 
 
-session_start();?>
+
+session_start();
+if(isset( $_SESSION['nombre_usuario'] )){
+
+    header("Location:Dashboard.php");
+}
+?>
 <html>
 <head>
 <link rel="stylesheet" href="./Assets/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="./Assets/css/style.css"/>
 <script type="text/javascript" src="./Assets/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./Assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./Assets/js/script.js"></script>
 
 
 </head>

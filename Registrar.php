@@ -1,5 +1,5 @@
 <?php include "Header.php";?>
-<form class="form-horizontal">
+<div class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
@@ -9,7 +9,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Nombre</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Deposite Nombre del Nuevo Usuario" class="form-control input-md">
+  <input id="nombrer" name="textinput" type="text" placeholder="Deposite Nombre del Nuevo Usuario" class="form-control input-md">
     
   </div>
 </div>
@@ -18,7 +18,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Usuario</label>  
   <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Deposite el Usuario del Nuevo Usuario" class="form-control input-md">
+  <input id="usuarior" name="textinput" type="text" placeholder="Deposite el Usuario del Nuevo Usuario" class="form-control input-md">
     
   </div>
 </div>
@@ -27,21 +27,32 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="passwordinput">Contraseña</label>
   <div class="col-md-4">
-    <input id="passwordinput" name="passwordinput" type="password" placeholder="Deposite la Clave Del nuevo Usuario" class="form-control input-md">
+    <input id="passwordr" name="password" type="password" placeholder="Deposite la Clave Del nuevo Usuario" class="form-control input-md">
     
   </div>
 </div>
-
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwordinput">Rol</label>
+  <div class="col-md-4">
+  <select name="rol" id="rol" class="form-control">
+    <option value=""></option>
+    <option value="1">Administrador</option>
+    <option value="3">Lector</option>
+    <option value="2">Usuario</option>
+  
+  </select>
+  </div>
+</div>
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Registrar</button>
+    <button  type = "button" id="btnregistrar" name="singlebutton" class="btn btn-primary">Registrar</button>
   </div>
 </div>
 
 </fieldset>
-</form>
+</div>
 <?php
 include "Footer.php";
 ?>

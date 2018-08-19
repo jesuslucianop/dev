@@ -8,17 +8,9 @@ class SubirArchivo{
         // $this->nombre = $nombre;
 
     }
- function inserbook($t,$a,$cp,$u)
-{
-    if(isset($t)){
-  
-     /*   $this->db->query("INSERT INTO GBH.Libros 
-        (id_libro, Titulo, Id_autores, Cant_pag,  url)VALUES('', '".$t."', '".$a."', '".$cp."','".$u."' ");
-*/
-echo $t;
-    }
 
-}
+
+
     public function uploadFile($files,$destiny,$titulor,$autor,$cantidadp){
    
         $titulo = $titulor;// Titulo Del Libro
