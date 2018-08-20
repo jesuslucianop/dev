@@ -26,17 +26,31 @@ class Usuarios
      }
      public function GetSeachUser()
      {
+        $result = $this->db->query("Select * from Usuarios ");
+       // $rows = $result->fetch_array(MYSQLI_ASSOC);
+      
+        while($row = $result->fetch_array())
+        {
+        $rows3[] = $row;
+        }
+        
+        foreach($rows3 as $row2)
+        {
+     echo $row2;
 
+        }
+        
 
      }
 
-}//Finalizacion de la clase
+    }//Finalizacion de la clase
 
-if(isset($_POST['btnregistrar']))
-{
-$us = new Usuarios();
-print_r($us->RegistrarUsuarios($_POST['nombre'],$_POST['usuario'],$_POST['password'],$_POST['rol']));
-echo $us->RegistrarUsuarios($_POST['nombre'],$_POST['usuario'],$_POST['password'],$_POST['rol']);
+    if(isset($_POST['btnregistrar']))
+    {
+        $us = new Usuarios();
+        print_r($us->RegistrarUsuarios($_POST['nombre'],$_POST['usuario'],$_POST['password'],$_POST['rol']));
+        echo $us->RegistrarUsuarios($_POST['nombre'],$_POST['usuario'],$_POST['password'],$_POST['rol']);
 
-}
 
+    }
+  

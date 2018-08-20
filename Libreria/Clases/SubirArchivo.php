@@ -1,5 +1,6 @@
 <?php
 include_once "Conexion.php";
+
 class SubirArchivo{
     private $db;
     public function __construct()
@@ -25,8 +26,10 @@ class SubirArchivo{
         $url = $destiny."/".$upfile;
        move_uploaded_file($tmp, $destiny . $upfile);
      /*$sql = $this->db->query("Insert into Libros(Titulo,Id_autores, Cant_pag, url) VALUES ('".$titulo."','".$autores."','".$cantidad_paginas."','".$url."') ");*/
-     $sql = $this->db->query("INSERT INTO GBH.libro (titulo,id_autores,cant_pag,url) VALUES('jesus','2','4','./Repositorio/18082018_927188_Sprint-Backlog.pdf')  ");
-   print_r($sql);
+     $sql = "INSERT INTO GBH.libro (Titulo,Id_autores, Cant_pag, url)VALUES('".$titulo."','".$autores."','".$cantidad_paginas."','".$url."') ";
+   $query = $this->db->query($sql);
+     print_r($query);
+   var_dump($query);
        /* $sql = "INSERT INTO GBH.Libros (Titulo,Id_autores, Cant_pag, url)VALUES('".$titulo."','".$autores."','".$cantidad_paginas."','".$url."') ";
        $row = $this->db->query($sql);
    */
@@ -49,4 +52,10 @@ class SubirArchivo{
 
 
 
+}
+if(isset($_POST['btnuploadlibro'])){
+$sa = new SubirArchivo();
+  
+
+print_r( $sa->uploadFile($_FILES,"./Repositorio/",$_POST['titulo'],$_POST['autores'],$_POST['cantidad']));
 }
