@@ -35,7 +35,7 @@ if(!isset($_SESSION['nombre_usuario'])){
             <li><a href="./Listausuarios.php">Lista De usuarios</a></li>
           </ul>
           <?php }?>
-              <li><a href="./Dashboard.php">Libros Disponible</a></li>
+              <li><a href="./LibrosDisponible.php">Libros Disponible</a></li>
                <li><a href="./Upload.php">Subir Libros</a></li>
                 <li><a href="#">Page 3</a></li>
    </li>
