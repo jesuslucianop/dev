@@ -48,17 +48,18 @@ foreach($rows3 as $row2)
         default:
             # code...
             break;
-    }
+    }/*
    if($row2['Rol']==2 or $row2['Rol']==3 ){
-    echo "<td>" ."<button class='btn btn-danger' type='button'>Borrar</button>" ."</td>";
+    echo "<td>" ."<button class='btn btn-danger' type='button' id='btnborrar' idusuario='".$row2['Id']."'>Borrar</button>" ."</td>";
     echo "<td>" ."<button class='btn btn-warning' type='button'>Editar</button>" ."</td>";
 
    }
-
+*/
 
     echo "</tr>";
 
-}?>
+}
+?>
 </tr>
 </tbody>
 

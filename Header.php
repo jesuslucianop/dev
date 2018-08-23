@@ -37,7 +37,7 @@ if(!isset($_SESSION['nombre_usuario'])){
           <?php }?>
               <li><a href="./LibrosDisponible.php">Libros Disponible</a></li>
                <li><a href="./Upload.php">Subir Libros</a></li>
-                <li><a href="#">Page 3</a></li>
+           
    </li>
   
     </ul>

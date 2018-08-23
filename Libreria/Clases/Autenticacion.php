@@ -1,22 +1,19 @@
 <?php
-include "Usuarios.php";
+
 include "Conexion.php";
 session_start();
 
 class Autenticacion{
 
     private $db;
-    public function __construct($nombre, $usuario)
+    public function __construct()
     {
+        //Instancia de la conexion
         $this->db = new Conexion();
         // $this->nombre = $nombre;
 
     }
-     public function registrar(){
-   echo "ssdsds";
-       
-    }
-
+  //Metodo para hacer login
     public function login($username,$password)
     {
         $row = $this->db->query("Select * from Usuarios where usuario = '".$username."' and password ='".$password."' ");
@@ -34,4 +31,11 @@ class Autenticacion{
 
 
 
+}
+//Donde se maneja el cierre de session
+if(isset($_POST['btncerrar'])){
+  echo "cerro";
+    session_start();
+    session_destroy();
+    header("Location:http://localhost/dev/index.php");
 }
