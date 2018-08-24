@@ -28,8 +28,7 @@ class SubirArchivo{
      /*$sql = $this->db->query("Insert into Libros(Titulo,Id_autores, Cant_pag, url) VALUES ('".$titulo."','".$autores."','".$cantidad_paginas."','".$url."') ");*/
      $sql = "INSERT INTO GBH.libro (Titulo,Id_autores, Cant_pag, url)VALUES('".$titulo."','".$autores."','".$cantidad_paginas."','".$url."') ";
    $query = $this->db->query($sql);
-     print_r($query);
-   var_dump($query);
+header("Location:http://localhost/dev/Upload.php");
        /* $sql = "INSERT INTO GBH.Libros (Titulo,Id_autores, Cant_pag, url)VALUES('".$titulo."','".$autores."','".$cantidad_paginas."','".$url."') ";
        $row = $this->db->query($sql);
    */

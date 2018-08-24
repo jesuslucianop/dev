@@ -15,12 +15,10 @@ class Usuarios
         //Metodo Para Eliminar Los Usuarios.
         public function EliminaRegistro($id)
         {
-            $editor = "DELETE FROM GBH.Usuarios 
-            WHERE
-            Id = '".$Id."' ";
+            $editor = "DELETE FROM GBH.Usuarios  WHERE id = '".$id."' ";
             $Consulta = $this->db->query($editor);
-            var_dump($consulta);
-
+            var_dump($Consulta);
+            var_dump($editor);
         }
         //Metodo Para Regisrar Usuarios Nuevos En la base DE datos
         public function RegistrarUsuarios($nombre,$usuario,$password,$Rol)
@@ -59,6 +57,16 @@ class Usuarios
     {
         $us = new Usuarios();
         print_r($us->RegistrarUsuarios($_POST['nombre'],$_POST['usuario'],$_POST['password'],$_POST['rol']));
+        
+
+
+    }
+  
+
+    if(isset($_POST['btnborrar']))
+    {
+        $us = new Usuarios();
+        echo ($us->EliminaRegistro($_POST['id']));
        
 
 

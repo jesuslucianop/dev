@@ -27,36 +27,45 @@ $("#btnregistrar").click(function(){
       });
 });
 //Boton de borrar Usuarios
-$("#btnborrar").click(function(){
-    var ids = [];
+$(".btnborrar").click(function(){
 
-$('#btnborrar').each(function () {
-  ids.push($(this).attr('idusuario')); // ids.push(this.id) would work as well.
-});
+   
 
-alert(ids);
-//location.reload();
-/*
+
+
     $.ajax({
         type:"POST",
-        data:{btnborrar:$("#btnborrar").val(),id:$("#nombre").val()},
+        data:{btnborrar:$(".btnborrar").val(),id:idautore},
         url:"http://localhost/dev/Libreria/Clases/Usuarios.php",
         success: function(data) {
-            location.reload();
+           console.log(data);
         }
-      });*/
+      });
 });
 //Boton de Agregar Autores Modal
 $("#btnagregarautores").click(function(){
    
 
-console.log("entro al boton");
     $.ajax({
         type:"POST",
         data:{btnagregarautores:$("#btnagregarautores").val(),nombreautor:$("#NombreAutor").val()},
         url:"http://localhost/dev/Libreria/Clases/Autores.php",
         success: function(data) {
             location.reload();
+        }
+      });
+});
+//Boton de Exportar a texto plano
+$(".btntext").click(function(){
+    
+    var url = $(this).attr('url');
+    alert(url);
+    $.ajax({
+        type:"POST",
+        data:{etexto:$("#etexto").val(),url:url},
+        url:"http://localhost/dev/Libreria/Clases/Prueba.php",
+        success: function(data) {
+            console.log(data);
         }
       });
 });

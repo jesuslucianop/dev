@@ -42,7 +42,7 @@ foreach($rows3 as $row2)
     echo "<td>" . $row2['cant_pag'] . "</td>";
     echo "<td>" 
     ."<button type='btn' class='btn btn-primary'>Descargar</button>
-    <button type='button' class='btn btn-warning'>Exportar texto</button>
+    <button type='button' class='btn btn-warning btntext' id='etexto' url='".$row2['url']."' >Exportar texto</button>
     <button type='button' class='btn btn-danger'>Exportar html</button>
     "."</td>";
 
