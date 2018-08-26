@@ -41,8 +41,10 @@ foreach($rows3 as $row2)
     echo "<td>" . $rowautores['Nombre'] . "</td>";
     echo "<td>" . $row2['cant_pag'] . "</td>";
     echo "<td>" 
-    ."<button type='btn' class='btn btn-primary'>Descargar</button>
-    <button type='button' class='btn btn-warning btntext' id='etexto' url='".$row2['url']."' >Exportar texto</button>
+    ."
+    <a href=http://localhost/dev/Libreria/Clases/Prueba.php?btndescargarpdf=1&id=".$row2['url']."&nombre=",urlencode($row2['titulo'] )," class='btn btn-primary'>Descargar</a>
+    <button type='button' class='btn btn-warning btntext' id='etexto' url='".$row2['url']."'  urlid='".$row2['id']."' >Exportar texto</button>
+    <a href=http://localhost/dev/Libreria/Clases/Prueba.php?dte=1&id=".$row2['id']." class='btn btn-primary dte'>Descargar txt Exportado</a>
     <button type='button' class='btn btn-danger'>Exportar html</button>
     "."</td>";
 

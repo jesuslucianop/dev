@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    $(".dte").hide();
 // boton Por donde se envia El cierre de Session
 $("#btncerrarsession").click(function(){
   
@@ -59,13 +59,53 @@ $("#btnagregarautores").click(function(){
 $(".btntext").click(function(){
     
     var url = $(this).attr('url');
+    var id = $(this).attr('urlid');
     alert(url);
     $.ajax({
         type:"POST",
-        data:{etexto:$("#etexto").val(),url:url},
+        data:{etexto:$("#etexto").val(),url:url,id:id},
         url:"http://localhost/dev/Libreria/Clases/Prueba.php",
         success: function(data) {
+            if(data == 0){
+                alert("Este pdf no se puede exportar a texto plano Debido a su formato");
+                location.reload();
+
+            }else{
             console.log(data);
+            $(".dte").show();
+        }
+        }
+      });
+});
+//boton Descargar texto plano anteriormente exportado
+$(".dte").click(function(){
+    console.log("ca");
+    var url = $(this).attr('url');
+    var id = $(this).attr('urlid');
+    alert(url);/*
+    $.ajax({
+        type:"POST",
+        data:{dte:$(".dte").val(),url:url,id:id},
+        url:"http://localhost/dev/Libreria/Clases/Prueba.php",
+        success: function(data) {
+        console.log(data);
+        }
+      });*/
+});
+//Boton de Descargar Pdf
+$(".btndescargarpdf").click(function(){
+    console.log("b");
+    var url = $(this).attr('url');
+    var id = $(this).attr('urlid');
+    alert(url);
+    $.ajax({
+        type:"POST",
+        data:{btndescargarpdf:$("#btndescargarpdf").val(),url:url,id:id},
+        url:"http://localhost/dev/Libreria/Clases/Prueba.php?btndescargarpdf=1",
+        success: function(data) {
+         
+            console.log(data);
+        
         }
       });
 });
