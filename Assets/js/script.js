@@ -64,7 +64,7 @@ $(".btntext").click(function(){
     $.ajax({
         type:"POST",
         data:{etexto:$("#etexto").val(),url:url,id:id},
-        url:"http://localhost/dev/Libreria/Clases/Prueba.php",
+        url:"http://localhost/dev/Libreria/Clases/prueba.php",
         success: function(data) {
             if(data == 0){
                 alert("Este pdf no se puede exportar a texto plano Debido a su formato");
@@ -101,7 +101,7 @@ $(".btndescargarpdf").click(function(){
     $.ajax({
         type:"POST",
         data:{btndescargarpdf:$("#btndescargarpdf").val(),url:url,id:id},
-        url:"http://localhost/dev/Libreria/Clases/Prueba.php?btndescargarpdf=1",
+        url:"http://localhost/dev/Libreria/Clases/prueba.php?btndescargarpdf=1",
         success: function(data) {
          
             console.log(data);

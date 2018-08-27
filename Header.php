@@ -4,7 +4,7 @@
 
 session_start();
 if(!isset($_SESSION['nombre_usuario'])){
-  header("Location:Index.php");
+  header("Location:index.php");
 }
 
 ?>
